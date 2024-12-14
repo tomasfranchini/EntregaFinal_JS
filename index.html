@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda en Línea</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Menú de Navegación -->
+  <nav>
+    <h1>Tienda de Mates</h1>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#" id="cart-icon">Carrito (<span id="cart-count">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección de Productos -->
+  <section class="product-list">
+    <div class="product" data-name="Producto 1" data-price="20">
+      <h2>Mate Imperial Negro</h2>
+      <p>Precio: $35</p>
+      <button onclick="addToCart('Producto 1', 35)">Agregar al Carrito</button>
+    </div>
+    <div class="product" data-name="Producto 2" data-price="30">
+      <h2>Mate Imperial Marron</h2>
+      <p>Precio: $35</p>
+      <button onclick="addToCart('Producto 2', 35)">Agregar al Carrito</button>
+    </div>
+    <div class="product" data-name="Producto 3" data-price="40">
+      <h2>Mate Imperial Beige</h2>
+      <p>Precio: $35</p>
+      <button onclick="addToCart('Producto 3', 35)">Agregar al Carrito</button>
+    </div>
+    <div class="product" data-name="Producto 3" data-price="40">
+      <h2>Bombilla pico de loro</h2>
+      <p>Precio: $10</p>
+      <button onclick="addToCart('Producto 3', 10)">Agregar al Carrito</button>
+    </div>
+    <div class="product" data-name="Producto 3" data-price="40">
+      <h2>Yerba Canarias</h2>
+      <p>Precio: $15</p>
+      <button onclick="addToCart('Producto 3', 15)">Agregar al Carrito</button>
+    </div>
+  </section>
+
+  <!-- Carrito de Compras -->
+  <div id="cart">
+    <h2>Carrito de Compras</h2>
+    <ul id="cart-items"></ul>
+    <p id="total-price">Total: $0</p>
+    <button onclick="clearCart()">Vaciar Carrito</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
